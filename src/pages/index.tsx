@@ -4,15 +4,14 @@ import { Button, Grid, Typography } from '@mui/material';
 import { useRouter } from 'next/router'
 import { useRecoilValue } from 'recoil';
 
-
 export default function Home() {
-  const router = useRouter();
-
-  const userEmail = useRecoilValue(userEmailState);
-  const userLoading = useRecoilValue(isUserLoading);
+    const router = useRouter();
+    const userEmail = useRecoilValue(userEmailState);
+    const userLoading = useRecoilValue(isUserLoading);
 
   return <div>
-      <Grid container style={{padding: "5vw"}}>
+     
+     <Grid container style={{padding: "5vw"}}>
           <Grid item xs={12} md={6} lg={6}>
               <div style={{marginTop: 100}}>
                   <Typography variant={"h2"}>
@@ -21,7 +20,7 @@ export default function Home() {
                   <Typography variant={"h5"}>
                       A place to learn, earn and grow
                   </Typography>
-                  {!userLoading && !userEmail && <div style={{display: "flex", marginTop: 20}}>
+                  <div style={{display: "flex", marginTop: 20}}>
                       <div style={{marginRight: 10}}>
                           <Button
                               size={"large"}
@@ -40,7 +39,8 @@ export default function Home() {
                               }}
                           >Signin</Button>
                       </div>
-                  </div>}
+                      </div>
+                  
               </div>
               <div>
               </div>
@@ -49,5 +49,6 @@ export default function Home() {
               <img src={"https://img.freepik.com/free-vector/empty-classroom-interior-with-chalkboard_1308-65378.jpg"} width={500} height={400} alt={"course-image"}/>
           </Grid>
       </Grid>
+                 
   </div>
 }
