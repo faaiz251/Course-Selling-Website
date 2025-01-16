@@ -6,9 +6,6 @@ import { useRecoilValue } from 'recoil';
 
 export default function Home() {
     const router = useRouter();
-    const userEmail = useRecoilValue(userEmailState);
-    const userLoading = useRecoilValue(isUserLoading);
-
   return <div>
      
      <Grid container style={{padding: "5vw"}}>
