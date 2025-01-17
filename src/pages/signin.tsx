@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
 
-function Signin() {
+export default function Signin() {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const router = useRouter()
@@ -75,4 +75,3 @@ function Signin() {
     </div>
 }
 
-export default Signin;
