@@ -50,7 +50,7 @@ function Signin() {
                     size={"large"}
                     variant="contained"
                     onClick={async () => {
-                        const res = await axios.post(`${BASE_URL}/admin/login`, {
+                        const res = await axios.post(`${BASE_URL}/api/auth/signin`, {
                             username: email,
                             password: password
                         }, {
